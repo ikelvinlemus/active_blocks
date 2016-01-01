@@ -1,11 +1,16 @@
+require 'active_blocks/decorator/setup'
+require 'active_blocks/decorator/schema'
+
 class ActiveBlocks::Decorator
 
-  require 'active_blocks/decorator/setup'
   include Setup
+  include Schema
 
   class << self
 
-    def attribute(name, options={})
+    def attribute(name, options={}, &block)
+
+      definitions[name.to_sym] = build_definition(name, options)
 
       mod = Module.new do
         define_method(name)       { instance_variable_get("@#{name}") }

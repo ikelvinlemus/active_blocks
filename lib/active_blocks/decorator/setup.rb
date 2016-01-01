@@ -1,24 +1,28 @@
-module ActiveBlocks::Decorator::Setup
+class ActiveBlocks::Decorator
 
-  attr_reader :model, :attributes
+  module Setup
 
-  def initialize(model, attributes={})
-    @attributes = {}
-    @model      = model
+    attr_reader :model, :attributes
 
-    setup_attributes(attributes)
-  end
+    def initialize(model, attributes={})
+      @attributes = {}
+      @model      = model
 
-  def setup_attributes(attributes)
-    attributes.each do |k, v|
-      setup_attribute(k, v)
+      setup_attributes(attributes)
     end
-  end
 
-  def setup_attribute(name, value)
-    return false unless respond_to?("#{name}=")
+    def setup_attributes(attributes)
+      attributes.each do |k, v|
+        setup_attribute(k, v)
+      end
+    end
 
-    send("#{name}=", value)
-  end
+    def setup_attribute(name, value)
+      return false unless respond_to?("#{name}=")
+
+      send("#{name}=", value)
+    end
+
+  end # Setup
 
 end
