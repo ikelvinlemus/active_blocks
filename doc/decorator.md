@@ -8,7 +8,7 @@ class UserDecorator < ActiveBlocks::Decorator
 
   attribute :name
   attribute :email
-  attribute :admin?, virtual: true
+  attribute :admin, virtual: true
 
 end
 
@@ -18,6 +18,6 @@ end
 ```ruby
 User = Struct.new(:name, :email)
 
-user = User.new('Foo')
+user = User.new('John Doe')
 user_decorator = UserDecorator.new(user)
 ```
