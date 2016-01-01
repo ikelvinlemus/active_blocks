@@ -1,6 +1,6 @@
 module ActiveBlocks::Decorator::Setup
 
-  attr_reader :attributes
+  attr_reader :model, :attributes
 
   def initialize(model, attributes={})
     @attributes = {}
