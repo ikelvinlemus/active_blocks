@@ -1,10 +1,15 @@
 require 'active_blocks/decorator/setup'
 require 'active_blocks/decorator/schema'
+require 'active_blocks/decorator/sync'
+require 'active_blocks/decorator/coercion'
 
 class ActiveBlocks::Decorator
 
   include Setup
   include Schema
+  include Sync
+  include Coercion
+
 
   class << self
 
@@ -18,8 +23,11 @@ class ActiveBlocks::Decorator
       end
       include mod
 
+      coerce_setter!(name, options)
+
     end # attribute
 
   end # self
+
 
 end

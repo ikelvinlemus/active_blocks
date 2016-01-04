@@ -15,5 +15,6 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'activemodel', '>= 3.2', '< 5'
+  s.add_dependency 'virtus'
 
 end
