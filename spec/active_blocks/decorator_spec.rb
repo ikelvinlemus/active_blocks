@@ -5,6 +5,7 @@ describe ActiveBlocks::Decorator do
       attribute :name
       attribute :email
     end
+    Decorator
   end
 
   let!(:model) { Struct.new(:name, :email, :address) }
