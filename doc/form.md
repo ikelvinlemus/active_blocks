@@ -14,10 +14,13 @@ end
 
 ## The API
 
-Instance methods:
+Instance methods:  
+
 1. `initialize(model, attributes={})` accepts an instance of the model that the form represents. 
 
-Class methods:
-1. `attribute` accepts the names of attributes to define on the form, you can pass the following options: 
+Class methods:  
+
+1. `attribute` accepts the names of attributes to define on the form, you can pass the following options:  
+ 
 - `virtual: true` 
 - `type: [Integer]` TODO
