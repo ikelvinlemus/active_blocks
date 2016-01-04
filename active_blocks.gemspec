@@ -5,8 +5,8 @@ require 'active_blocks/version'
 Gem::Specification.new do |s|
   s.name        = 'active_blocks'
   s.version     = ActiveBlocks::VERSION
-  s.summary     = 'manage business logic'
-  s.description = 'ActiveBlocks is an implementation for manage business logic'
+  s.summary     = 'Manage decorators, form objects and operations.'
+  s.description = 'ActiveBlocks is an implementation for manage decorators, form objects and operations.'
   s.author      = 'Kelvin Lemus'
   s.email       = 'kelvin932810@gmail.com'
   s.files       = Dir['{lib}/**/*', 'README.md']
